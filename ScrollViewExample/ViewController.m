@@ -41,14 +41,14 @@
     NSData *data = [NSData dataWithContentsOfURL:imageURL];
     UIImage *img = [[UIImage alloc] initWithData:data];
     _newsView.newsImage.image = img;
-    self.scrollView.contentSize =CGSizeMake(320, 700);
+//    self.scrollView.contentSize =CGSizeMake(320, 700);
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     //    self.scrollView.contentSize =CGSizeMake(500, 1000);
-    self.scrollView.contentSize =CGSizeMake(320, 700);
+//    self.scrollView.contentSize =CGSizeMake(320, 700);
 }
 
 @end
