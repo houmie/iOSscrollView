@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TNViewController">
+            <connections>
+                <outlet property="scrollView" destination="ua1-W0-KKm" id="6pJ-cd-slW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Fzb-3Y-Ijm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NewsView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ua1-W0-KKm">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y11-Lx-OZO">
+                            <rect key="frame" x="8" y="133" width="584" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="tgl-NO-2Dc"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NewsBody" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-7U-rqt">
+                            <rect key="frame" x="9" y="333" width="583" height="405"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="405" id="9NM-U8-DyZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NewsHeader" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR3-98-cdT">
+                            <rect key="frame" x="25" y="64" width="550" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="GUO-sf-Aw2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="26"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="QBH-7U-rqt" firstAttribute="top" secondItem="y11-Lx-OZO" secondAttribute="bottom" id="J87-u5-Lnl"/>
+                        <constraint firstAttribute="trailing" secondItem="AR3-98-cdT" secondAttribute="trailing" constant="25" id="Sue-0r-VUQ"/>
+                        <constraint firstItem="y11-Lx-OZO" firstAttribute="centerX" secondItem="AR3-98-cdT" secondAttribute="centerX" id="WG2-BD-h04"/>
+                        <constraint firstItem="y11-Lx-OZO" firstAttribute="centerX" secondItem="ua1-W0-KKm" secondAttribute="centerX" id="ZlO-FV-pKN"/>
+                        <constraint firstItem="y11-Lx-OZO" firstAttribute="trailing" secondItem="QBH-7U-rqt" secondAttribute="trailing" id="aCK-1l-fxr"/>
+                        <constraint firstItem="QBH-7U-rqt" firstAttribute="leading" secondItem="ua1-W0-KKm" secondAttribute="leading" constant="9" id="amo-vq-0lS"/>
+                        <constraint firstItem="AR3-98-cdT" firstAttribute="top" secondItem="ua1-W0-KKm" secondAttribute="top" constant="64" id="fxX-3w-vjI"/>
+                        <constraint firstItem="AR3-98-cdT" firstAttribute="leading" secondItem="ua1-W0-KKm" secondAttribute="leading" constant="25" id="h5X-wI-4x6"/>
+                        <constraint firstItem="y11-Lx-OZO" firstAttribute="top" secondItem="AR3-98-cdT" secondAttribute="bottom" constant="-1" id="kPz-bz-WpH"/>
+                        <constraint firstAttribute="bottom" secondItem="QBH-7U-rqt" secondAttribute="bottom" constant="-138" id="kpU-3j-ddN"/>
+                        <constraint firstItem="y11-Lx-OZO" firstAttribute="leading" secondItem="ua1-W0-KKm" secondAttribute="leading" constant="8" id="lcL-As-FAX"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ua1-W0-KKm" secondAttribute="bottom" id="9uA-rH-0ZL"/>
+                <constraint firstItem="ua1-W0-KKm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GhM-zE-FLY"/>
+                <constraint firstAttribute="trailing" secondItem="ua1-W0-KKm" secondAttribute="trailing" id="fDz-lC-tRc"/>
+                <constraint firstItem="ua1-W0-KKm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xYd-6d-Y95"/>
+            </constraints>
+            <connections>
+                <outlet property="newsBody" destination="QBH-7U-rqt" id="iaL-9j-b2Y"/>
+                <outlet property="newsHeader" destination="AR3-98-cdT" id="JKo-AI-GpJ"/>
+                <outlet property="newsImage" destination="y11-Lx-OZO" id="cVM-oC-YFZ"/>
+            </connections>
+        </view>
+    </objects>
+</document>
